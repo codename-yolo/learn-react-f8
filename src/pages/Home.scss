@@ -1,0 +1,63 @@
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &-custom{
+        width: 100%;
+        display: flex
+    }
+}
+
+.l-2-4 {
+    flex: 0 0 20%;
+    max-width: 100%;
+}
+
+.l-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.item-1{
+    background-color: red;
+    order:1
+}
+.item-2{
+    background-color: red;
+    order:2
+}
+.item-3{
+    background-color: red;
+    order:3
+}
+.item-4{
+    background-color: red;
+    order:4
+}
+.item-5{
+    background-color: red;
+    order:5
+}
+.item-6{
+    background-color: red;
+    order:6
+}
+
+@media screen and (max-width: 1024px) {
+    .m-4{
+        flex: 0 0 33.3333%;
+        max-width: 100%;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
