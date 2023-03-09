@@ -6,12 +6,13 @@ const Home = () => {
     return text;
   };
   return (
-    <div className="grid-container">
-      <div className="grid-item">Item 1</div>
-      <div className="grid-item">Item 2</div>
-      <div className="grid-item">Item 3</div>
-      <div className="grid-item">Item 4</div>
-      <div className="grid-item">Item 5</div>
+    <div className="grid wide">
+      <div className="row">
+        <div className="col l-3">Item 1</div>
+        <div className="col l-3">Item 2</div>
+        <div className="col l-3">Item 3</div>
+        <div className="col l-3">Item 4</div>
+      </div>
     </div>
   );
 };
