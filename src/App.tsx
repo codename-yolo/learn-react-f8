@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Hoisting from '@components/learning/Hoisting';
 import Parent from '@components/learning/propsChild/Parent';
 import WebSocket from '@components/learning/WebSocket';
+import TodoList from '@components/learning/TodoList';
 
 /**
 - Syntax reactElement document.createElement(type, props, children, n) (từ tham số thứ 3 đều thành children) 
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/hoisting" element={<Hoisting />} />
                 <Route path="/props-child" element={<Parent />} />
                 <Route path="/ws" element={<WebSocket />} />
+                <Route path="/todo-list" element={<TodoList />} />
             </Routes>
         </div>
     );
