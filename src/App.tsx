@@ -7,6 +7,7 @@ import Hoisting from '@components/learning/Hoisting';
 import Parent from '@components/learning/propsChild/Parent';
 import WebSocket from '@components/learning/WebSocket';
 import TodoList from '@components/learning/TodoList';
+import Hooks from '@components/learning/hooks';
 
 /**
 - Syntax reactElement document.createElement(type, props, children, n) (từ tham số thứ 3 đều thành children) 
@@ -18,18 +19,19 @@ vd : muốn truyền style cho ele bất kỳ thì có thể <div style={{width:
  */
 
 function App() {
-    return (
-        <div className="App">
-            <Routes>
-                <Route path="/header" element={<Header />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/hoisting" element={<Hoisting />} />
-                <Route path="/props-child" element={<Parent />} />
-                <Route path="/ws" element={<WebSocket />} />
-                <Route path="/todo-list" element={<TodoList />} />
-            </Routes>
-        </div>
-    );
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/header" element={<Header />} />
+				<Route path="/home" element={<Home />} />
+				<Route path="/hoisting" element={<Hoisting />} />
+				<Route path="/props-child" element={<Parent />} />
+				<Route path="/ws" element={<WebSocket />} />
+				<Route path="/todo-list" element={<TodoList />} />
+				<Route path="/hooks" element={<Hooks />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;

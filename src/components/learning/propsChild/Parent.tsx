@@ -2,16 +2,16 @@ import React from 'react';
 import Child from './Child';
 
 const Parent = () => {
-    const obj = {
-        a: 1,
-    };
-    return (
-        <div>
-            <Child str="123" express={{ ...obj }}>
-                string
-            </Child>
-        </div>
-    );
+	const obj = {
+		a: 1,
+	};
+	return (
+		<div>
+			<Child str="123" express={{ ...obj }}>
+				string
+			</Child>
+		</div>
+	);
 };
 
 /** 

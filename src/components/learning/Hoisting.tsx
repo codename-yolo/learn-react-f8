@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
 const Hoisting = () => {
-    const functionHoisting = () => {
-        console.log(a);
-        return 123;
-    };
+	const functionHoisting = () => {
+		console.log(a);
+		return 123;
+	};
 
-    const a = 'Test hoisting';
+	const a = 'Test hoisting';
 
-    return <div>Hoisting</div>;
+	return <div>Hoisting</div>;
 };
 
 /**
