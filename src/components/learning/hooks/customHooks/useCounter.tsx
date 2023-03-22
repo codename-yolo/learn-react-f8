@@ -1,6 +1,6 @@
 import { useState, useEffect, useDebugValue } from 'react';
 
-// useDebugValue 
+// useDebugValue
 
 const useCounter = () => {
 	const [count, setCount] = useState(0);

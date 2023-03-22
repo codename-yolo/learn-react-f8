@@ -1,14 +1,9 @@
-import React, { useDeferredValue, useState } from 'react'
+import React, { useDeferredValue } from 'react';
 
-const useDebounce= () => {
-  const [name, setName] = useState<string>('')
-  const deferredValue = useDeferredValue(name)
-  
-  return (
-    <>
-    <input type="text" value={name} />
-    </>
-  )
-}
+const useDebounce = (name: string) => {
+	const deferredValue = useDeferredValue(name);
+
+	return deferredValue;
+};
 
 export default useDebounce;
