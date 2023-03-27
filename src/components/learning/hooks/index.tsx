@@ -121,7 +121,7 @@ const Hooks = () => {
 			{/* <input type="text" value={name} onChange={handleChangeName} /> */}
 			{/* <DeferredValueComponent name={name} /> */}
 
-			{/* useDeferredValue */}
+			{/* useId*/}
 			{/* <UseIdComponent /> */}
 
 			{/* useInsertionEffect */}
