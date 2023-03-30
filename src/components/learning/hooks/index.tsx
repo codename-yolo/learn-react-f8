@@ -1,8 +1,10 @@
 ﻿import React, {
+	useCallback,
 	useEffect,
 	useId,
 	useInsertionEffect,
 	useLayoutEffect,
+	useMemo,
 	useRef,
 	useState,
 } from 'react';
@@ -112,6 +114,14 @@ const Hooks = () => {
 	// 	inputRef.current?.clear()
 	// }
 
+	/* useEffect */
+	// Luôn được gọi sau khi component được mounted
+	const [title, setTitle] = useState<string>('');
+
+	useEffect(() => {
+		document.title = title;
+	}, [title]);
+
 	return (
 		<>
 			{/* useDebugValue */}
@@ -131,6 +141,15 @@ const Hooks = () => {
 			{/* useImperativeHandle */}
 			{/* <ImperativeHandleComponent ref={inputRef} name="ref"/> */}
 			{/* <button onClick={handleClearInput}>Clear Input</button> */}
+
+			{/* useEffect */}
+			<input
+				type="text"
+				value={title}
+				onChange={(e) => {
+					setTitle(e.target.value);
+				}}
+			/>
 		</>
 	);
 };

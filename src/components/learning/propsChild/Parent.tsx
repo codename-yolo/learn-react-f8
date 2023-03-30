@@ -5,9 +5,16 @@ const Parent = () => {
 	const obj = {
 		a: 1,
 	};
+	const attr = {
+		style: {
+			color: 'red',
+		},
+	};
 	return (
 		<div>
-			<Child str="123" express={{ ...obj }}>
+			{/* {...attr} === style={{color: 'red}} */}
+			{/* Hai cach truyen props cho ket qua nhu nhau */}
+			<Child str="123" {...attr} express={{ ...obj }}>
 				string
 			</Child>
 		</div>

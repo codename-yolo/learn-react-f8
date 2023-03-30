@@ -4,11 +4,12 @@ interface IProps {
 	str: any;
 	express: any;
 	children: any;
+	style: any;
 }
 
-const Child = ({ str, express, children }: IProps) => {
-	console.log(str, express, children);
-	return <div>Child</div>;
+const Child = ({ str, express, children, ...rest }: IProps) => {
+	console.log(str, express, children, rest);
+	return <div {...rest}>Child</div>;
 };
 
 export default Child;

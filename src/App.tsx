@@ -8,6 +8,8 @@ import Parent from '@components/learning/propsChild/Parent';
 import WebSocket from '@components/learning/WebSocket';
 import TodoList from '@components/learning/TodoList';
 import Hooks from '@components/learning/hooks';
+import ChangeBackground from '@components/learning/mountUnmount';
+import Closure from '@components/learning/Closure';
 
 /**
 - Syntax reactElement document.createElement(type, props, children, n) (từ tham số thứ 3 đều thành children) 
@@ -29,6 +31,8 @@ function App() {
 				<Route path="/ws" element={<WebSocket />} />
 				<Route path="/todo-list" element={<TodoList />} />
 				<Route path="/hooks" element={<Hooks />} />
+				<Route path="/closure" element={<Closure />} />
+				<Route path="/change-bg" element={<ChangeBackground />} />
 			</Routes>
 		</div>
 	);
