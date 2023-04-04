@@ -1,4 +1,6 @@
 
-:local .my-class {
-    color: red;
+:local(.my-class) {
+    .text-red{
+        color: red;
+    }
 }

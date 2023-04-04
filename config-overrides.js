@@ -12,12 +12,17 @@ module.exports = override(
       {
         loader: 'css-loader',
         options: {
-          modules: {
-            localIdentName: '[local]__[hash:base64:5]'
-          },
+          url: false,
+          // modules: {
+          //   auto: false,
+          //   localIdentName: '[local]__[hash:base64:5]'
+
+          // },
+          modules: false,
           importLoaders: 1
         }
       },
+      'postcss-loader',
       'sass-loader'
     ]
   })
