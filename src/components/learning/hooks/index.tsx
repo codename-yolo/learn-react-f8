@@ -5,6 +5,7 @@
 	useInsertionEffect,
 	useLayoutEffect,
 	useMemo,
+	useReducer,
 	useRef,
 	useState,
 } from 'react';
@@ -15,6 +16,9 @@ import ImperativeHandleComponent, { InputHandle } from './components/ImperativeH
 import InsertionEffectComponent from './components/InsertionEffectComponent';
 
 import useCounter from './customHooks/useCounter';
+
+import { userReducer, initValue } from './learnUseReducer/const';
+import LearnUseReducer from './learnUseReducer';
 
 /**
  * useState
@@ -116,11 +120,13 @@ const Hooks = () => {
 
 	/* useEffect */
 	// Luôn được gọi sau khi component được mounted
-	const [title, setTitle] = useState<string>('');
+	// const [title, setTitle] = useState<string>('');
 
-	useEffect(() => {
-		document.title = title;
-	}, [title]);
+	// useEffect(() => {
+	// 	document.title = title;
+	// }, [title]);
+
+	/* useReducer */
 
 	return (
 		<>
@@ -143,13 +149,16 @@ const Hooks = () => {
 			{/* <button onClick={handleClearInput}>Clear Input</button> */}
 
 			{/* useEffect */}
-			<input
+			{/* <input
 				type="text"
 				value={title}
 				onChange={(e) => {
 					setTitle(e.target.value);
 				}}
-			/>
+			/> */}
+
+			{/* useReducer */}
+			<LearnUseReducer />
 		</>
 	);
 };

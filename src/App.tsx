@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from '@components/Header';
 import Home from './pages/Home';
 import Hoisting from '@components/learning/Hoisting';
@@ -23,17 +23,17 @@ vd : muốn truyền style cho ele bất kỳ thì có thể <div style={{width:
 function App() {
 	return (
 		<div className="App">
-			<Routes>
-				<Route path="/header" element={<Header />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/hoisting" element={<Hoisting />} />
-				<Route path="/props-child" element={<Parent />} />
-				<Route path="/ws" element={<WebSocket />} />
-				<Route path="/todo-list" element={<TodoList />} />
-				<Route path="/hooks" element={<Hooks />} />
-				<Route path="/closure" element={<Closure />} />
-				<Route path="/change-bg" element={<ChangeBackground />} />
-			</Routes>
+			<Switch>
+				<Route path="/header" component={Header} />
+				<Route path="/home" component={Home} />
+				<Route path="/hoisting" component={Hoisting} />
+				<Route path="/props-child" component={Parent} />
+				<Route path="/ws" component={WebSocket} />
+				<Route path="/todo-list" component={TodoList} />
+				<Route path="/hooks" component={Hooks} />
+				<Route path="/closure" component={Closure} />
+				<Route path="/change-bg" component={ChangeBackground} />
+			</Switch>
 		</div>
 	);
 }
