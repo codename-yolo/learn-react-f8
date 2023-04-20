@@ -1,15 +1,14 @@
-import React, { FC, memo } from 'react';
+import React, { FC, ReactNode, memo } from 'react';
 
 interface HocComponentProps {
-	name: string;
+	name?: string;
 	data?: any;
 	setData?: any;
+	children?: ReactNode;
 }
 
 const HocComponent: FC<HocComponentProps> = (props) => {
-	const { name, data, setData } = props;
-	console.log('render hoc', data, setData);
-
+	const { name, data, setData, children } = props;
 	return <div>{name}</div>;
 };
 

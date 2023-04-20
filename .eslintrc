@@ -8,6 +8,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "no-debugger": "off"
   }
 }

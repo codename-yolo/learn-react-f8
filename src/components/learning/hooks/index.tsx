@@ -23,6 +23,8 @@ import { userReducer, initValue } from './learnUseReducer/const';
 import LearnUseReducer from './learnUseReducer';
 import { Button, Card, Divider, List, Space, Typography } from 'antd';
 import HocComponent from './hoc/HocComponent';
+import TodoList from '../TodoList';
+import TodoListContext from '../todoContextReducer';
 
 /**
  * useState
@@ -206,11 +208,13 @@ const Hooks = () => {
 
 	/* memo */
 
-	const [data, setData] = useState<any>({
-		name: 123,
-	});
+	// const [data, setData] = useState<any>({
+	// 	name: 123,
+	// });
 
-	const [num, setNum] = useState<number>(0);
+	// const [num, setNum] = useState<number>(0);
+
+	/* useContext with useReducer */
 
 	return (
 		<>
@@ -295,9 +299,12 @@ const Hooks = () => {
 			/> */}
 
 			{/* memo */}
-			{num}
+			{/* {num}
 			<Button onClick={() => setNum((prev) => prev + 1)}>Up</Button>
-			<HocComponent name="123" data={data} />
+			<HocComponent name="123" data={data} /> */}
+
+			{/* useContext with useReducer*/}
+			<TodoListContext />
 		</>
 	);
 };
