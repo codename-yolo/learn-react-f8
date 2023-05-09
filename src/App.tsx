@@ -10,6 +10,7 @@ import TodoList from '@components/learning/TodoList';
 import Hooks from '@components/learning/hooks';
 import ChangeBackground from '@components/learning/mountUnmount';
 import Closure from '@components/learning/Closure';
+import Meta from '@components/learning/useContext';
 
 /**
 - Syntax reactElement document.createElement(type, props, children, n) (từ tham số thứ 3 đều thành children) 
@@ -33,6 +34,7 @@ function App() {
 				<Route path="/hooks" component={Hooks} />
 				<Route path="/closure" component={Closure} />
 				<Route path="/change-bg" component={ChangeBackground} />
+				<Route path="/context" component={Meta} />
 			</Switch>
 		</div>
 	);
