@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Child from './Child';
 
 const Parent = () => {
@@ -10,8 +10,19 @@ const Parent = () => {
 			color: 'red',
 		},
 	};
+
+	console.log('render p');
+
+	const [num, setNum] = useState<number>(0);
+
+	useEffect(() => {
+		console.log('uef p setState');
+		setNum(1);
+	}, []);
+
 	return (
 		<div>
+			<>{console.log('return p')}</>
 			{/* {...attr} === style={{color: 'red}} */}
 			{/* Hai cach truyen props cho ket qua nhu nhau */}
 			<Child str="123" {...attr} express={{ ...obj }}>

@@ -11,6 +11,7 @@ import Hooks from '@components/learning/hooks';
 import ChangeBackground from '@components/learning/mountUnmount';
 import Closure from '@components/learning/Closure';
 import Meta from '@components/learning/useContext';
+import useDarkMode from '@components/learning/hooks/customHooks/useDarkMode';
 
 /**
 - Syntax reactElement document.createElement(type, props, children, n) (từ tham số thứ 3 đều thành children) 
@@ -22,8 +23,15 @@ vd : muốn truyền style cho ele bất kỳ thì có thể <div style={{width:
  */
 
 function App() {
+	console.log('render app');
+
+	const isDarkMode = useDarkMode();
+
+	console.log(isDarkMode);
+
 	return (
 		<div className="App">
+			<>{console.log('return app')}</>
 			<Switch>
 				<Route path="/header" component={Header} />
 				<Route path="/home" component={Home} />

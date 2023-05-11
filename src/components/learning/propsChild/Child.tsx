@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface IProps {
 	str: any;
@@ -8,8 +8,20 @@ interface IProps {
 }
 
 const Child = ({ str, express, children, ...rest }: IProps) => {
-	console.log(str, express, children, rest);
-	return <div {...rest}>Child</div>;
+	console.log('render c');
+
+	const [num, setNum] = useState<number>(0);
+
+	useEffect(() => {
+		console.log('uef c setState');
+		setNum(1);
+	}, []);
+
+	return (
+		<div {...rest}>
+			<>{console.log('return c')}</>
+		</div>
+	);
 };
 
 export default Child;
